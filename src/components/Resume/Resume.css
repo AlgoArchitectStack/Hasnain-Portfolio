@@ -1,0 +1,426 @@
+/* Container */
+.resume-container {
+  display: grid;
+  width: 100%;
+  gap: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+  
+}
+
+/* Header Section */
+.resume-header {
+  position: relative;
+  text-align: center;
+  margin: 50px 0;
+  width: 100%;
+}
+
+.title {
+  margin: 0;
+  font-size: 6rem;
+  line-height: 1.167;
+  color: rgba(0, 0, 0, 0.05);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  white-space: nowrap;
+
+}
+
+.subtitle {
+  margin: 0;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-size: 2.125rem;
+  line-height: 1.235;
+  letter-spacing: 0.00735em;
+  color: #333;
+  font-weight: 700;
+  z-index: 2;
+  position: relative;
+  display: inline-block;
+
+}
+
+.divider {
+  height: 4px;
+  background-color: #0dcaf0;
+  margin: 10px auto 0;
+  z-index: 2;
+  width: 40px;
+}
+
+.section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 equal column */
+  gap: 50px;  
+  padding: 20px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.section-title{
+  font-size: 30px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+/* Cards */
+.card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 20px;
+  /* min-height: 200px; */
+  min-height: auto;
+  display: flex;
+  flex-direction: column;      
+  justify-content: space-between; 
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  /* width: 700px; */
+  width: 100%;
+  max-width: 700px;
+  box-shadow: 0 2px 4px #0000001a;
+  transition: box-shadow 0.3s ease;
+}
+.card .date {
+  display: inline-block;
+  background: #0dcaf0;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+.card-title{
+  font-weight: 600;
+  font-size: 30px;
+  color: black;
+}
+.card-subtitle{
+  font-size: 20px;
+  font-weight: 200;
+
+} 
+.card-subtitle h3{
+  color: #e91e63;
+  margin: 20px 0;
+
+}
+.card-disc{
+  
+  font-weight: 200;
+  font-size: 21px;
+  color: grey;
+  
+}
+
+.card:hover {
+  box-shadow: 0 4px 8px #0003;
+}
+
+/* Skills Section */
+.skills-section {
+  padding: 20px;
+  margin: 20px 80px;
+  max-width: 1000%;
+  width: 100%;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.skills-section h2 {
+  text-align: start;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+
+}
+
+.skill {
+   margin-bottom: 50px;
+   width: 48%;  
+  min-width: 250px;
+  position: relative; 
+}
+
+.skill-name {
+  display: block;
+  font-weight: 500;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.progress-bar {
+  height: 10px !important;
+  width: 70% !important;
+  background: #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden;
+
+}
+.progress-fill {
+  height: 100%;
+  background: #0dcaf0;      /* fill color */
+  border-radius: 4px 0 0 4px;
+  transition: width 0.4s ease;  /* smooth animation */
+  position: relative;
+}
+.progress {
+  height: 100%;
+  background: #0dcaf0;
+  border-radius: 4px;
+  transition: width 0.4s ease;
+}
+
+.percentage {
+  position: absolute;
+  top: 100%; 
+  text-align: right;
+  transform: translateX(-30%); /* khud ki width adjust kare */
+  width: 100%;
+  font-size: 14px;
+  text-align: right; 
+  font-weight: 200;
+  font-style: bold;
+  font-size: 20px;
+  margin-top: 5px;
+  color: #333;
+}
+
+/* CV Button */
+.cv-button-container {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.cv-button {
+  display: inline-block;
+  margin: 10px !important;
+  
+  padding: 10px 30px !important;
+  color: #0dcaf0 !important;    
+  border: 2px solid #0dcaf0 !important;
+  text-decoration: none;
+  border-radius: 30px !important;
+  font-size: 20px !important;
+  width: auto;
+  max-width: fit-content;
+  transition: background-color 0.3s ease;
+}
+
+.cv-button:hover {
+  background:#0dcaf0 !important;
+  color: #fff !important; 
+
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .section {
+    grid-template-columns: 1fr; /* single column */
+    gap: 30px;
+    padding: 10px;
+  }
+
+  .card {
+    width: 100%; /* full width of container */
+    min-height: auto;
+    padding: 15px;
+  }
+.skill {
+    width: 100%; /* single column */
+  }
+
+  .title {
+    font-size: 5rem !important; /* title chhota karein */
+  }
+  .subtitle {
+    font-size: 2rem !important; /* subtitle chhota karein */
+  }
+}
+
+@media (max-width: 660px) {
+  .title {
+      font-size: 5rem !important;
+  }
+  .subtitle {
+    font-size: 1.8rem !important;
+  }
+}
+@media (max-width: 480px) {
+  .title {
+    font-size: 3rem !important;
+  }
+  .subtitle {
+    font-size: 1.2rem !important;
+  }
+}
+
+
+/* ===== Section (Education & Experience) Responsiveness ===== */
+@media (max-width: 900px) {
+  .section {
+    grid-template-columns: 1fr !important; /* single column */
+    gap: 30px !important;
+    padding: 10px !important;
+  }
+
+  .card {
+    width: 100% !important;
+    min-height: auto !important;
+    padding: 15px !important;
+  }
+
+  .card-title {
+    font-size: 24px !important;
+  }
+
+  .card-subtitle h3 {
+    font-size: 18px !important;
+  }
+
+  .card-disc {
+    font-size: 18px !important;
+  }
+
+  .card .date {
+    font-size: 12px !important;
+    padding: 4px 8px !important;
+  }
+}
+
+/* ===== Skills Section Responsiveness ===== */
+@media (max-width: 900px) {
+  .skills-section {
+    margin: 20px 10px !important;
+    padding: 10px !important;
+  }
+
+  .skills {
+    flex-direction: column !important;
+    gap: 15px !important;
+  }
+
+  .skill {
+    width: 100% !important;
+  }
+
+  .skill-name, .percentage {
+    font-size: 16px !important;
+  }
+
+  .progress-bar {
+    width: 100% !important;
+  }
+}
+
+/* ===== CV Button Responsiveness ===== */
+@media (max-width: 480px) {
+  .cv-button {
+    padding: 8px 20px !important;
+    font-size: 14px !important;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* @media (max-width: 768px) {
+  .skill {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .cv-button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .skill-name,
+  .percentage {
+    font-size: 14px;
+  }
+} */

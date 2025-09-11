@@ -1,0 +1,235 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/* Header section */
+.aboutHeader {
+  text-align: center;
+  position: relative;
+}
+.aboutHeader .MuiTypography-root{
+ margin: 50px 0;
+}
+.background-text{
+  font-size: 8rem !important;
+  font-weight: 600 !important;
+  color: rgba(0,0,0,0.05);
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  margin: 0;
+}
+.foreground-text{
+  font-size: 3rem !important;
+  font-style: bold !important;
+  font-weight: 700 !important;
+  margin-top: -10rem !important;
+  margin-bottom: 0.5rem;
+
+} 
+
+.aboutHeader h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.aboutHeader h4 {
+  font-size: 1.5rem;
+  color: #555;
+}
+
+.aboutHeader .MuiDivider-root {
+  width: 80px;
+  margin: 1rem auto;
+  background-color:  #0dcaf0; 
+  height: 5px;
+  height: 3px;
+  border-radius: 5px;
+}
+
+/* Content section */
+.aboutContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 2rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem 0;
+  box-sizing: border-box;
+}
+
+/* Left side */
+.aboutLeft {
+  flex: 0 0 58%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.5rem;
+  margin-left: 3rem;
+ 
+}
+.aboutLeft .MuiTypography-root{
+  font-size: 1.6rem;
+  
+}
+.aboutLeft h2 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.aboutLeft p {
+  line-height: 1.6;
+  margin: 0;
+  color: #444;
+}
+
+.highlight {
+  color: #0dcaf0; 
+  font-weight: 700;
+}
+
+/* Right side */
+.aboutRight {
+   flex: 0 0 28%;  
+  margin-right: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100%;
+  gap: 1rem;
+  font-size: 2rem;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+
+}
+
+.aboutRight .MuiDivider-root {
+  background-color: #ddd;
+}
+
+.normalText {
+  font-weight: 400;
+  color: #444;
+}
+
+.highlightLink {
+  color:  #0dcaf0;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.highlightLink:hover {
+  text-decoration: underline;
+}
+
+/* Button spacing */
+.aboutRight .MuiButton-root {
+  padding: 15px;
+  margin-top: 2rem;
+  background-color: rgb(0, 188, 212);
+  border-radius: 25px;
+  align-self: flex-start;
+  
+}
+.aboutRight .label{
+  font-weight: 700;
+  font-size: 20px;
+  color: black;
+  margin-right: 5px;
+}
+.aboutRight .normalText{
+  font-weight: 600;
+  font-style: normal;
+  color: #444;
+}
+
+/* Responsiveness */
+
+/* content section */
+@media (max-width: 900px) {
+  .aboutContent {
+    flex-direction: column !important;
+    gap: 2rem !important;
+    margin: 0 auto !important;
+    padding: 1rem 0 !important;
+    align-items: center !important; 
+    justify-content: center !important;
+   
+  }
+
+  .aboutLeft {
+    width: 100% !important;       
+    margin-left: 0 !important;
+    padding: 1rem !important;
+    text-align: left;
+  }
+
+  .aboutRight {
+    width: auto !important;       
+    font-size: 1rem !important;   
+    min-height: auto !important;
+    padding: 1.5rem !important;   
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
+    margin: 0 auto !important;
+  }
+}
+
+/* Typography adjustment */
+@media (max-width: 900px) {
+  .aboutLeft h2 {
+    font-size: 1.9rem !important;
+  }
+  .aboutLeft p {
+    font-size: 1.3rem !important;
+    line-height: 1.4 !important;
+  }
+  .aboutRight .label {
+    font-size: 17px !important;
+  }
+  .aboutRight .normalText,
+  .highlightLink {
+    font-size: 16px !important;
+  }
+  .aboutRight .MuiButton-root {
+    padding: 12px !important;
+    font-size: 14px !important;
+  }
+}
+
+/* Foreground & background  */
+@media (max-width: 900px) {
+ :where(.aboutHeader) .background-text {
+    font-size: 5rem !important; 
+  }
+  :where(.aboutHeader) .foreground-text {
+    font-size: 2rem !important;
+    margin-top: -6rem !important; 
+  }
+}
+@media (max-width: 650px) {
+ :where(.aboutHeader).background-text {
+    font-size: 5rem !important;
+ 
+  }
+ :where(.aboutHeader).foreground-text {
+    font-size: 1.6rem !important;
+    margin-top: -6rem !important;
+ 
+  }
+} 
+@media (max-width: 480px) {
+ :where(.aboutHeader) .background-text  {
+    font-size: 3rem !important;
+  }
+ :where(.aboutHeader) .foreground-text  {
+    font-size: 1.2rem !important;
+  }
+}
+

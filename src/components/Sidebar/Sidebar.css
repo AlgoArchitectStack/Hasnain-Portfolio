@@ -1,0 +1,139 @@
+.avatar {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 10px;
+
+}
+
+.name {
+    text-align: center;
+    padding-top: 20px;
+    margin-bottom: 25px;
+    color: #0dcaf0;
+}
+.name h2{
+    font-weight: 200;
+    font-size: 40px;
+}
+
+.menu-list {
+   padding: 0; 
+  margin-top: 5px;
+  width: 100%;
+}
+
+.menu-item {
+  width: 100%;
+  margin: 5px 0; 
+  list-style: none;
+  display: flex;
+  justify-content: center;   
+  cursor: pointer;         
+
+}
+
+.menu-btn {
+  display: block;
+  width: 100%;       
+  padding: 15px 5px;
+  font-size: 1.4rem;
+  background: none;
+  border: none;
+  color: #fff;
+  text-align: center; 
+  cursor: pointer;
+
+}
+
+.menu-btn:hover {
+  background-color: #0dcaf0;
+  color: white;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  gap: 15px;
+}
+
+.icon-button {
+  color: #0dcaf0;
+  font-size: 30px;
+ 
+}
+
+.hamburger-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #0dcaf0;
+  cursor: pointer;
+  z-index: 1100;
+
+}
+
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.5); 
+  z-index: 999; /* sidebar = 1000, hamburger = 1100 */
+}
+
+/* Sidebar open - controlled by React state */
+.sidebar.open {
+  transform: translateX(0); 
+}
+/* Desktop - always visible */
+@media (min-width: 900px) {
+  .sidebar {
+    transform: translateX(0); /* always visible */
+    width: 20vw;
+    padding: 30px;
+  }
+  .hamburger-btn {
+    display: none;
+  }
+}
+
+/* Mobile adjustments */
+@media (max-width: 900px) {
+  .sidebar {
+    width: 220px;     
+    padding: 15px; 
+  } 
+  .avatar {
+    width: 100px !important;
+    height: 100px !important;
+  }
+  .menu-btn {
+    font-size: 16px;  
+    text-align: center;
+  }
+  .social-icons {
+    margin-top: 10px;
+  }
+  .icon-button svg {
+    font-size: 24px;   
+  }
+  .name h2 {
+    font-size: 20px !important; 
+    text-align: center;         
+    margin-top: 5px;   
+  }
+  .menu-btn {
+    font-size: 1.2rem;   
+    padding: 10px 5px;   
+    margin-top: 5px;     
+  }
+}
+

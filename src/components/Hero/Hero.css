@@ -1,0 +1,127 @@
+.Container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    padding: 0 20px;
+    position: relative; 
+    background-image: url('../../assets/Banner/Image.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: grey; 
+    z-index: 0;
+}
+
+.Container:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1;
+}
+
+.Container h1,
+.Container h2 {
+    color: white;
+    text-transform: uppercase;
+    word-spacing: 10px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+   
+}
+
+.Container h1 {
+    font-size: 50px;
+    margin: 10px 0;
+}
+
+.Container h2 {
+   
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+.MuiButton-outlined {
+    z-index: 2 !important;
+    color: rgb(0, 188, 212) !important;
+    border-color: rgb(0, 188, 212) !important;
+    margin-top: 20px !important;
+    padding: 10px 30px !important;
+    border-radius: 25px !important;
+    position: relative !important;
+}
+
+.MuiButton-outlined:hover {
+    color: #fff !important;
+    background-color: rgb(0, 188, 212) !important;
+    border-color: rgb(0, 188, 212) !important;
+}
+
+.Container .arrow-container {
+    color: #0dcaf0;
+    position: absolute !important;
+    bottom: 100px !important;
+    left: 50% !important;
+   
+    animation: smooth-bounce 2s  infinite ease-in-out !important;
+    z-index: 999 !important; 
+}
+
+.Container .arrow-container svg {
+    width: 60px !important;
+    height: 60px !important;
+    display: block;
+}
+
+@keyframes smooth-bounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(-20px); }
+}
+
+@media (max-width: 900px) {
+  .main-content {
+    margin-left: 0 !important;       /* sidebar ke liye space hatao */
+    width: 100% !important;          /* full width le lo */
+  }
+}
+
+@media (max-width: 900px) {
+  .Container {
+    width: 100% !important;       /* full width */
+    padding: 0 15px !important;   /* thoda side padding */
+    height: 100vh !important;     /* full viewport height */
+  }
+
+  .Container h1 {
+    font-size: 32px !important;   /* smaller font */
+    margin: 10px 0 !important;
+  }
+
+  .Container h2 {
+    font-size: 18px !important;
+    margin: 15px 0 !important;
+  }
+
+  .MuiButton-outlined {
+    padding: 8px 25px !important;
+    font-size: 14px !important;
+    margin-top: 15px !important;
+  }
+
+  .Container .arrow-container {
+    bottom: 50px !important;  /* thoda adjust */
+    left: 50% !important;
+  }
+
+  .Container .arrow-container svg {
+    width: 40px !important;
+    height: 40px !important;
+  }
+}

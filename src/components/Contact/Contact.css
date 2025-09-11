@@ -1,0 +1,222 @@
+.contact-container {
+  padding: 0 20px 60px 20px;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+
+}
+
+.contact-header {
+  margin-top: 40px;
+  margin-bottom: 60px;
+  position: relative;
+
+}
+
+.title {
+  font-size: 8rem !important;
+  font-weight: 700 !important;
+  color: rgba(0, 0, 0, 0.05);
+  text-transform: uppercase !important;
+  position: absolute !important;
+  left: 50% !important;
+  top: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  white-space: nowrap;
+  z-index: 1;
+
+}
+
+.subtitle {
+  font-size: 2.5rem !important;
+  font-weight: 700 !important;
+  color: #333;
+  position: relative !important;
+  z-index: 2 !important;
+  display: inline-block !important;
+
+}
+
+.contact-content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 20px;
+  overflow-x: hidden;
+  flex-wrap: wrap;  
+
+}
+
+/* Left Side */
+.contact-info {
+  flex: 0 0 25%; 
+  margin-left: 10px;
+  padding: 0;
+
+}
+
+.contact-info h6 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #333;
+
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 12px 0;
+
+}
+
+.info-item p{
+  font-weight: 500;
+  font-size: 25px;
+  color: #444;
+
+}
+
+.info-item svg{
+  color: #0dcaf0 !important;
+  font-size: 35px !important;
+
+}
+
+.icons {
+  display: flex;
+  margin-top: 8px;
+  flex-wrap: wrap;
+  margin: 20px;
+  font-size: 30px;
+  gap: 20px;
+
+}
+
+.icon{
+
+  margin-right: 20px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.icon svg {
+  font-size: 40px; 
+  
+}
+
+.icon:hover {
+
+  transform: scale(1.2);
+
+}
+
+
+/* Right Side */
+.contact-form { 
+  flex: 1;
+  min-width: 300px;  
+  padding: 0;
+
+}
+
+.contact-form h6 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  font-weight: 600;
+  color: #333;
+
+}
+
+.contact-form .MuiTextField-root {
+  margin-bottom: 15px;
+
+}
+
+.contact-form button {
+  background: #0dcaf0;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 10px 18px;
+  transition: background 0.3s ease;
+
+}
+
+.contact-form button:hover {
+  background: #007bff;
+
+}
+
+
+
+/* Header Responsiveness  */
+@media (max-width: 900px) {
+  .title {
+    font-size: 5rem !important; 
+  }
+  .subtitle {
+    font-size: 2rem !important; 
+  }
+}
+@media (max-width: 660px) {
+  .title {
+      font-size: 5rem !important;
+  }
+  .subtitle {
+    font-size: 1.8rem !important;
+  }
+}
+
+/* Contact Content Responsiveness */
+@media (max-width: 900px) {
+  .contact-content {
+    flex-direction: column !important;  
+    gap: 30px !important;
+    align-items: center !important;
+  }
+
+  .contact-info {
+    flex: 1 1 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    text-align: center;
+  }
+
+  .contact-form {
+    flex: 1 1 100% !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    padding: 0 !important;
+  }
+
+  .icons {
+    justify-content: center !important;
+  }
+}
+
+/*Very small screens*/
+@media (max-width: 480px) {
+  .title {
+    font-size: 3rem !important;
+  }
+  .subtitle {
+    font-size: 1.2rem !important;
+  }
+
+  .info-item svg {
+    font-size: 30px !important;
+  }
+
+  .icon svg {
+    font-size: 30px !important;
+  }
+
+  .contact-form .MuiTextField-root {
+    margin-bottom: 12px !important;
+  }
+
+  .contact-form button {
+    padding: 8px 16px !important;
+    font-size: 14px !important;
+  }
+}

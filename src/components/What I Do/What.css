@@ -1,0 +1,181 @@
+.what-section {
+  padding: 40px;
+  position: relative; 
+  background: #f9f9f9;
+  box-sizing: border-box;
+}
+
+.section-header{
+  margin-top: 40px;
+  margin-bottom: 60px;
+  position: relative;
+  text-align: center;
+}
+
+.what-title {
+
+  font-size: 8rem !important;
+  font-weight: 700 !important;
+  color: rgba(0, 0, 0, 0.05);
+  text-transform: uppercase !important;
+  position: absolute !important;
+  left: 50% !important;
+  top: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  white-space: nowrap;
+  z-index: 1;
+  
+}
+
+.what-subtitle {
+  font-size: 2.5rem !important;
+  font-weight: 700 !important;
+  color: #333;
+  position: relative !important;
+  z-index: 2 !important;
+  display: inline-block !important;
+
+
+} 
+
+.divider {
+  height: 4px;
+  width: 60px;
+  background-color: #0dcaf0;
+  margin: 12px auto 40px auto;
+  border-radius: 2px;
+  z-index: 2;
+} 
+
+/* Service Grid */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin: 0 auto;
+  padding: 60px 40px;
+}
+
+/* Service Card */
+.service-card {
+  padding: 30px;
+  min-height: 220px;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  background: #fff;
+}
+
+/* Row layout for icon + content */
+.service-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+}
+
+.service-icon svg {
+  color: #0dcaf0 !important;
+  font-size: 50px;
+  flex-shrink: 0;
+}
+
+.service-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+.service-content h5 {
+  font-weight: 700 !important;
+  margin: 0 0 6px 0 !important;
+  color: #222 !important;
+}
+
+.service-content .description {
+  
+  font-size: 18px !important;
+  color: #555;
+  
+}
+
+/* Responsive */
+
+/* Large Tablet / Small Desktop */
+@media (max-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    padding: 50px 30px;
+  }
+}
+
+/* Tablet / Mobile */
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding: 40px 20px;
+  }
+
+  .service-row {
+    flex-direction: column; /* icon upar, content neeche */
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .service-icon svg {
+    font-size: 40px; /* thoda chhota icon */
+  }
+
+  .service-content .description {
+    font-size: 16px; /* text scale down */
+  }
+}
+
+/* Extra small mobile */
+
+/* Sabse pehle bada breakpoint */
+@media (max-width: 650px) {
+  .what-title {
+    font-size: 5rem !important;
+  }
+  .what-subtitle {
+    font-size: 1.6rem !important;
+  }
+}
+
+/* Uske baad chhota */
+@media (max-width: 480px) {
+  .what-title {
+    font-size: 3rem !important;
+  }
+  .what-subtitle {
+    font-size: 1.2rem !important;
+  }
+}
+
+/* Sabse chhota */
+@media (max-width: 437px) {
+  .what-title {
+    font-size: 4rem !important;
+  }
+  .what-subtitle {
+    font-size: 1.6rem !important;
+  }
+
+  .service-card {
+    padding: 20px;
+    min-height: auto;
+  }
+
+  .service-icon svg {
+    font-size: 35px;
+  }
+
+  .service-content .description {
+    font-size: 14px;
+  }
+}
