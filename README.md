@@ -2,7 +2,15 @@
 
 Personal portfolio website built with **React 19** and **Vite 6**.
 
-For full documentation — setup, deployment, configuration, and project structure — see the [root README](../../README.md).
+**Key Features**
+
+* Sidebar Navigation: Easy access to sections like Home, About Me, What I Do, Projects, Resume, and Contact.
+* Education & Experience Timeline: Visually structured cards highlighting degree details, university, self-employed roles, and key achievements.
+* Skills Bar Display: Interactive visual indicators showcasing proficiency in Web Design, React.js, and core frontend technologies.
+* Social Links Integration: Quick links to GitHub, LinkedIn, and social profiles.
+* Responsive Layout: Tailored design that automatically adapts smoothly across mobile, tablet, and desktop screens.
+
+---
 
 ## Quick Start
 
